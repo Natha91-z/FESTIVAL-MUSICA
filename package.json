@@ -2,6 +2,7 @@
   "name": "festival-musica",
   "version": "1.0.0",
   "description": "Aprendiendo SASS Y NPM",
+  "type":"module",
   "keywords": [
     "SASS",
     "NPM",
@@ -16,12 +17,13 @@
     "url": "git+https://github.com/Natha91-z/FESTIVAL-MUSICA.git"
   },
   "author": "Nathalia Gutierrez Pinilla",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass scss:build/css --watch",
+    "hola": "gulp hola"
   },
   "devDependencies": {
+    "gulp": "^5.0.1",
     "sass": "^1.102.0"
   }
 }
