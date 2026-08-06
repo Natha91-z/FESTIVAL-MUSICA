@@ -1,5 +1,17 @@
-export function hola(done) {
-    console.log('Hola desde Gulfile.js')
+import { src, dest, watch } from 'gulp'
+import * as darSass from 'sass'
+import gulpSass from 'gulp-sass'
+
+const sass = gulpSass(darSass)
+
+export function css ( done ) {
+    src('src/scss/app.scss')
+    .pipe( sass() )
+    .pipe( dest('build/css'))
+    done()
 }
 
-done()
+export function dev() {
+    watch('src/scss/app.scss', css)
+}
+
