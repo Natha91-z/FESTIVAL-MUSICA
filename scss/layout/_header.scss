@@ -4,10 +4,21 @@
 .header {
     background-color: v.$verde;
 
+    @include m.tablet{
+        &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: .1rem .2rem .3rem #333;
+    }
+    }
+
     @include m.telefono {
         color: white;
         width: 10px;
-        height: 1px;
+        top: 0;
+        
     }
 
       @include m.tablet {
@@ -56,11 +67,14 @@
     }
 
     a {
-        &:hover{
+        &:hover,
+        &.active {
             color: v.$amarillo;
         }
         color: v.$blanco;
         font-size: 2.4rem;
     }
 }
+
+
 
